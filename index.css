@@ -1,0 +1,189 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: white; 
+}
+
+#firstImage{    
+position: absolute;
+width: 90px;
+height: 90px;
+left: 150px;
+top: 51px;
+}
+
+h1{
+position: absolute;
+width: 272px;
+height: 25px;
+left: 59px;
+top: 158px;
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 25px;
+margin-top: 0px;
+color: #FFFFFF;
+}
+
+#mainDiv{
+margin:auto;
+position: relative;
+width: 390px;
+height: 844px;
+background: #1B1924;   
+}
+
+#textArea{
+position: absolute;
+width: 317px;
+height: 118px;
+left: 36px;
+top: 202px;
+background: #444059;
+border-radius: 8px;
+resize: none;
+border: none;
+color:white;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 30px;
+border: none;
+}
+
+textarea::placeholder {
+padding-left: 5px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+color: #8F8F8F;
+ text-align: left;
+padding-left: 8px;
+}
+
+#inputDiv{
+    margin-top: 10px;
+}
+
+#inputFrom{
+position: absolute;
+width: 152.85px;
+height: 40px;
+left: 37px;
+top: 329px;
+background: #444059;
+border-radius: 8px;
+border: none;
+font-weight: bold;
+font-family: 'Inter';
+color:white;
+}
+
+#inputFrom::placeholder{
+    text-align: center;
+}
+
+#inputTo{
+position: absolute;
+width: 152.85px;
+height: 40px;
+left: 199.15px;
+top: 329px;
+background: #444059;
+border-radius: 8px;
+border: none;
+font-weight: bold;
+font-family: 'Inter';
+color:white;
+}
+
+#inputTo::placeholder{
+    text-align: center;
+}
+#publishButton{
+position: absolute;
+width: 317px;
+height: 61px;
+left: 35px;
+top: 378px;
+background: #28A9F1;
+border-radius: 8px;
+font-family: 'Inter';
+font-weight: 700;
+font-size: 22px;
+align-items: center;
+text-align: center;
+border: none;
+}
+
+#endorText{
+position: absolute;
+width: 160px;
+height: 20px;
+left: 114px;
+top: 418px;
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: BOLD;
+font-size: 18px;
+line-height: 20px;
+padding-top: 20px;
+color: #FFFFFF;
+text-align: center;
+font-family: 'Inter';
+}
+
+ul {
+    top: 478px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+ position: absolute;
+ min-height: 129px;
+ font-weight: bold;
+}
+
+ul li {
+width: 317px;
+min-height: 10px;
+left: 36px;
+top: 493px;
+background: #FFFFFF;
+flex-grow: 1;
+text-align: center;
+ box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+ margin-left: 40px;
+ margin-right: 40px;    
+ overflow: visible;
+ 
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+ul li button {
+  background-image: url('assets/heart.png');
+  background-size: cover;
+  border: none;
+  width: 30px; 
+  height: 30px; 
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
+ul li input.inputFrom{
+    font-weight: bold;
+}
+
+
+
+#like-count {
+    display: none;
+}
