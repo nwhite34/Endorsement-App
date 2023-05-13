@@ -165,7 +165,7 @@ text-align: center;
 }
 
 ul li:hover {
-    cursor: pointer;
+    
 }
 
 ul li button {
@@ -176,6 +176,7 @@ ul li button {
   height: 30px; 
   margin-left: 200px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 ul li input.inputFrom{
