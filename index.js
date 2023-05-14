@@ -125,10 +125,10 @@ function appendItemToShoppingListEl(item) {
   newDiv.appendChild(newLikeCount);
   newEl.appendChild(newDiv);
 
-  newEl.addEventListener("dblclick", function () {
-    let exactLocationOfItemInDB = ref(database, `endoresement/${itemID}`)
-    remove(exactLocationOfItemInDB)
-  });
+  //newEl.addEventListener("dblclick", function () {
+    //let exactLocationOfItemInDB = ref(database, `endoresement/${itemID}`)
+   // remove(exactLocationOfItemInDB)
+ // });
 
   shoppingListEl.append(newEl);
 }
