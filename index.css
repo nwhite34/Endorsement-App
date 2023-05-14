@@ -1,8 +1,17 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: white; 
+    background: #1B1924; 
 }
+
+
+#mainDiv{
+    margin:0 auto;
+    position: relative;
+    width: 390px;
+    height: 844px;
+    background: #1B1924;   
+    }
 
 #firstImage{    
 position: absolute;
@@ -27,13 +36,7 @@ margin-top: 0px;
 color: #FFFFFF;
 }
 
-#mainDiv{
-margin:auto;
-position: relative;
-width: 390px;
-height: 844px;
-background: #1B1924;   
-}
+
 
 #textArea{
 position: absolute;
@@ -81,6 +84,8 @@ border: none;
 font-weight: bold;
 font-family: 'Inter';
 color:white;
+display:flexbox;
+margin-bottom: 10px;
 }
 
 #inputFrom::placeholder{
@@ -99,6 +104,8 @@ border: none;
 font-weight: bold;
 font-family: 'Inter';
 color:white;
+display: flexbox;
+margin-bottom: 10px;
 }
 
 #inputTo::placeholder{
@@ -146,11 +153,11 @@ ul {
     gap: 10px;
  position: absolute;
  min-height: 129px;
- font-weight: bold;
+ 
+ 
 }
 
 ul li {
-width: 317px;
 min-height: 10px;
 left: 36px;
 top: 493px;
@@ -161,11 +168,8 @@ text-align: center;
  margin-left: 40px;
  margin-right: 40px;    
  overflow: visible;
- 
-}
-
-ul li:hover {
-    
+ font-family: 'Inter';
+ mAX-width: 317PX;
 }
 
 ul li button {
@@ -179,7 +183,13 @@ ul li button {
   cursor: pointer;
 }
 
-ul li input.inputFrom{
+li {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+ 
+
+ul li input{
     font-weight: bold;
 }
 
@@ -188,3 +198,9 @@ ul li input.inputFrom{
 #like-count {
     display: none;
 }
+
+
+ul li p{
+    max-width: 117PX;
+}
+

@@ -73,8 +73,21 @@ function appendItemToShoppingListEl(item) {
   let newDiv = document.createElement("div");
   let newLikeButton = document.createElement("button");
   let newLikeCount = document.createElement("span");
-  newEl.textContent = itemValue;
+  
+  // split the itemValue string into the "To:" and "From:" parts
+  let [toText, fromText] = itemValue.split("\n\nFrom:");
+  
+  // wrap the "To:" and "From:" parts in <strong> tags to make them bold
+  toText = "<strong>To:</strong> " + toText.substr(3);
+  fromText = "<strong>From:</strong> " + fromText.trim();
 
+  // create a new HTML element to display the itemValue
+  let newItemValue = document.createElement("div");
+  newItemValue.innerHTML = toText + "<br>" + fromText;
+  
+  newEl.appendChild(newItemValue);
+
+  // set up the like button and count
   newLikeCount.id = itemID;
   newLikeCount.textContent = parseInt(localStorage.getItem(itemID)) || 0;
   newLikeButton.addEventListener("click", function () {
@@ -82,17 +95,25 @@ function appendItemToShoppingListEl(item) {
     currentCount++;
     newLikeCount.textContent = currentCount;
     localStorage.setItem(itemID, currentCount);
-    newEl.addEventListener("click", function () {
-    })
+    newEl.removeEventListener("click", function () {});
+
+    
+  });
+
+   // Disable the button after it has been clicked
+   newLikeButton.addEventListener("click", function () {
+    newLikeButton.disabled = true;
   });
 
   newDiv.appendChild(newLikeButton);
   newDiv.appendChild(newLikeCount);
   newEl.appendChild(newDiv);
-  newEl.addEventListener("dblclick", function () {
+
+  //newEl.addEventListener("dblclick", function () {
    // let exactLocationOfItemInDB = ref(database, `endoresement/${itemID}`)
    // remove(exactLocationOfItemInDB)
-  })
+  //});
+
   shoppingListEl.append(newEl);
 }
 
@@ -124,3 +145,4 @@ ulList.addEventListener('DOMNodeInserted', function (event) {
   // set the new height for the mainDiv
   mainDiv.style.height = height + 'px';
 });
+
