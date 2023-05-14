@@ -20,7 +20,7 @@ const likeButton = document.getElementById('like-button')
 const likeCount = document.getElementById('like-count')
 
 publishButtonEl.addEventListener("click", function () {
-  let inputValue = "To:" + inputToEl.value + "\n" + "\n" + inputFieldEl.value +   "\n" + "\n\nFrom:" + inputFromEl.value;
+  let inputValue = "To:" + "<b>" + inputToEl.value + "</b>" + "\n" + "\n" + inputFieldEl.value + "\n" + "\n\nFrom:" + "<b>" + inputFromEl.value + "</b>";
 
   if (inputFieldEl.value === "" || inputFromEl.value === "" || inputToEl.value === "") {
     alert("INVALID! YOU MUST COMPLETE THE FORM!");
@@ -73,21 +73,21 @@ function appendItemToShoppingListEl(item) {
   let newDiv = document.createElement("div");
   let newLikeButton = document.createElement("button");
   let newLikeCount = document.createElement("span");
-  
+
   // split the itemValue string into the "To:" and "From:" parts
   let [toText, fromText] = itemValue.split("\n\nFrom:");
-  
+
   // wrap the "To:" and "From:" parts in <strong> tags to make them bold
   toText = "<strong>To:</strong> " + toText.substr(3);
   fromText = "<strong>From:</strong> " + fromText.trim();
 
 
-  
+
 
   // create a new HTML element to display the itemValue
   let newItemValue = document.createElement("div");
   newItemValue.innerHTML = toText + "<br>" + fromText;
-  
+
   newEl.appendChild(newItemValue);
 
   // set up the like button and count
@@ -95,23 +95,23 @@ function appendItemToShoppingListEl(item) {
   newLikeCount.textContent = parseInt(localStorage.getItem(itemID)) || 0;
   newLikeButton.addEventListener("click", function () {
     let currentCount = parseInt(newLikeCount.textContent) || 0;
-   
+
     newLikeCount.textContent = currentCount;
     localStorage.setItem(itemID, currentCount);
-    newEl.removeEventListener("click", function () {});
+    newEl.removeEventListener("click", function () { });
 
-    
+
   });
 
-   // Disable the button after it has been clicked
-   newLikeButton.addEventListener("click", function () {
+  // Disable the button after it has been clicked
+  newLikeButton.addEventListener("click", function () {
     newLikeButton.disabled = true;
   });
   let liked = localStorage.getItem(itemID + '_liked');
   if (liked) {
     newLikeButton.disabled = true;
   }
-  
+
   newLikeButton.addEventListener('click', function () {
     let currentCount = parseInt(newLikeCount.textContent) || 0;
     currentCount++;
@@ -120,14 +120,14 @@ function appendItemToShoppingListEl(item) {
     localStorage.setItem(itemID + '_liked', true);
     newLikeButton.disabled = true;
   });
-  
+
   newDiv.appendChild(newLikeButton);
   newDiv.appendChild(newLikeCount);
   newEl.appendChild(newDiv);
 
   newEl.addEventListener("dblclick", function () {
     let exactLocationOfItemInDB = ref(database, `endoresement/${itemID}`)
-   remove(exactLocationOfItemInDB)
+    remove(exactLocationOfItemInDB)
   });
 
   shoppingListEl.append(newEl);

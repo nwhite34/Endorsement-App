@@ -156,8 +156,7 @@ ul {
     gap: 10px;
  position: absolute;
  min-height: 129px;
-
- 
+ min-width: 317px;
 }
 
 ul li {
@@ -189,7 +188,6 @@ ul li button {
   margin-top: 10px;
   cursor: pointer;
   font-family: 'Inter';
- 
 }
 
 li {
@@ -197,9 +195,6 @@ li {
   word-wrap: break-word;
 }
  
-
-
-
 #like-count {
     display: none;
 }
