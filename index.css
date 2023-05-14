@@ -169,11 +169,12 @@ ul li button {
   background-image: url('assets/heart.png');
   background-size: cover;
   border: none;
-  width: 20px; 
-  height: 20px; 
+  width: 30px; 
+  height: 30px; 
   margin-left: 240px;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  
 }
 
   
@@ -181,7 +182,6 @@ li {
   white-space: pre-wrap;
   word-wrap: break-word;
   font-family: 'Inter', sans-serif;
-  
 }
  
 #like-count {
