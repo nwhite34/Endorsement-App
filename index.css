@@ -55,6 +55,7 @@ font-weight: 400;
 font-size: 15px;
 line-height: 30px;
 border: none;
+margin-top: -5px;
 }
 
 textarea::placeholder {
@@ -128,9 +129,11 @@ font-size: 22px;
 align-items: center;
 text-align: center;
 border: none;
+margin-top: 5px;
 }
 
 #endorText{
+margin-top: 20px;
 position: absolute;
 width: 160px;
 height: 20px;
@@ -155,8 +158,6 @@ ul {
     flex-wrap: wrap-reverse;
     gap: 10px;
  position: absolute;
- min-height: 129px;
- min-width: 317px;
 }
 
 ul li {
@@ -171,9 +172,10 @@ ul li {
     margin-right: 40px;
     overflow: visible;
     font-family: 'Inter';
-    max-width: 317PX;
+    max-width: 290PX;
     text-align: left;
-    padding-left: 15px; 
+    padding-left: 10px;
+    padding-right: 10px;  
     padding-top: 15px;
   }
 
@@ -193,6 +195,7 @@ ul li button {
 li {
   white-space: pre-wrap;
   word-wrap: break-word;
+  
 }
  
 #like-count {
