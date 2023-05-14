@@ -2,44 +2,51 @@ html, body {
     margin: 0;
     padding: 0;
     background: #1B1924; 
+    font-family: 'Josefin Sans', 'sans-serif';
 }
 
 
 #mainDiv{
     margin:0 auto;
-    position: relative;
+ 
     width: 390px;
     height: 844px;
     background: #1B1924;   
+    
     }
 
+#grid1{
+    width:312px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #firstImage{    
-position: absolute;
-width: 90px;
-height: 90px;
-left: 150px;
-top: 51px;
+width:100px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 30%;
+margin-top: 10px;
 }
 
 h1{
-position: absolute;
-width: 272px;
-height: 25px;
-left: 59px;
-top: 158px;
-font-family: 'Josefin Sans', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 25px;
-line-height: 25px;
-margin-top: 0px;
-color: #FFFFFF;
+    width: 100%;
+    padding-bottom: 10px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: BOLD;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Inter';
 }
 
 
 
 #textArea{
-position: absolute;
+
 width: 300px;
 height: 118px;
 left: 36px;
@@ -75,20 +82,29 @@ color: #8F8F8F;
 }
 
 #inputFrom{
-position: absolute;
-width: 148px;
-height: 40px;
-left: 37px;
-top: 329px;
-background: #444059;
-border-radius: 8px;
-border: none;
-font-weight: bold;
-font-family: 'Inter';
-color:white;
-margin-bottom: 10px;
-text-align: center;
+  
+    width: 100%;
+    height: 40px;
+    background: #444059;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Inter';
+    color:white;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
+#inputTo{
+
+    width: 100%;
+    height: 40px;
+    background: #444059;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Inter';
+    color:white;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 #inputFrom::content{
@@ -100,50 +116,33 @@ text-align: center;
     text-align: center;
 }
 
-#inputTo{
-position: absolute;
-width: 148px;
-height: 40px;
-left: 199.15px;
-top: 329px;
-background: #444059;
-border-radius: 8px;
-border: none;
-font-weight: bold;
-font-family: 'Inter';
-color:white;
-margin-bottom: 10px;
-text-align: center;
 
-}
 
 #inputTo::placeholder{
     text-align: center;
 }
 #publishButton{
-position: absolute;
-width: 317px;
+
+width: 312px;
 height: 61px;
-left: 35px;
-top: 378px;
 background: #28A9F1;
 border-radius: 8px;
 font-family: 'Inter';
 font-weight: 700;
 font-size: 22px;
-align-items: center;
+
 text-align: center;
 border: none;
-margin-top: 5px;
+
 }
 
 #endorText{
-margin-top: 20px;
-position: absolute;
+
+margin-left: auto;
+margin-right: auto;
+margin-top: 0;
 width: 160px;
 height: 20px;
-left: 114px;
-top: 418px;
 font-family: 'Josefin Sans';
 font-style: normal;
 font-weight: BOLD;
@@ -156,13 +155,12 @@ font-family: 'Inter';
 }
 
 ul {
-    top: 478px;
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 10px;
- position: absolute;
+    margin-top: 60px;
 }
 
 ul li {
@@ -189,10 +187,10 @@ ul li button {
   background-image: url('assets/heart.png');
   background-size: cover;
   border: none;
-  width: 30px; 
-  height: 30px; 
-  margin-left: 240px;
-  margin-top: 10px;
+  width: 20px; 
+  height: 20px; 
+  margin-left: 260px;
+ 
   cursor: pointer;
   font-family: 'Inter';
 }
@@ -208,11 +206,10 @@ li {
 }
 
 
-
 #inputDiv{
-    position: absolute;
     display: flex;
-    gap: 10px;
-  top: -10px;
+    gap: 1em;
+    margin-block-end: 0.8em;
+    height: 40px;
 }
 
