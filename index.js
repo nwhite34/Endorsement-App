@@ -4,7 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
-  databaseURL: "https://wearethechampions-ab60a-default-rtdb.firebaseio.com/"
+  databaseURL: "https://wearethechamps-af520-default-rtdb.firebaseio.com/"
 }
 
 const helloDiv = document.getElementById("hello")
